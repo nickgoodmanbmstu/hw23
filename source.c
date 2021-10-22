@@ -63,7 +63,7 @@ int main(void) {
 	/*printf("%d", c);
 	printf("%d", d);
 	printf("%d", N);*/
-	if ((c == 0) && (d = N))
+	if ((c == 0) && (d == N))
 
 		printf("The graph is a simple cycle");
 
