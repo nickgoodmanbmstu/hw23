@@ -8,7 +8,9 @@ int main(void) {
 
 	int i, j;
 
-//	int c = 0;
+	int c = 0;
+
+	int d = 0;
 
 	
 	printf("Enter the size of your matrix: ");
@@ -30,11 +32,16 @@ int main(void) {
 			if (A[i][j] != 0) {
 				while (A[i][j] >= 1) {
 					fprintf(s, "%d--%d\n", i + 1, j + 1);
-				/*	if (A[i][j] > 1)
+					if (A[i][j] > 1)
 					{
-						c = c + 1;
-					}*/
+						c++;
+					}
+					if (A[i][i]>0)
+						c++;
+					
+
 					A[i][j]--;
+					d++;
 					A[j][i] = 0;
 					
 
@@ -53,8 +60,16 @@ int main(void) {
 	free(A);
 	system("dot -Tpng hw.gv -o graph.png");
 	system("graph.png");
-	//printf("%d", c);
-	//smth
+	/*printf("%d", c);
+	printf("%d", d);
+	printf("%d", N);*/
+	if ((c == 0) && (d = N))
+
+		printf("The graph is a simple cycle");
+
+	else
+
+		printf("The graph is not a simple cycle");
 	
 
 	return 0;
