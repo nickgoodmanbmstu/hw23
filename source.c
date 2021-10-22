@@ -54,6 +54,7 @@ int main(void) {
 	system("dot -Tpng hw.gv -o graph.png");
 	system("graph.png");
 	//printf("%d", c);
+	//smth
 	
 
 	return 0;
